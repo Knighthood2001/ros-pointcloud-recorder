@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ros-pointcloud-recorder',
-    version='0.1.0',
+    version='0.1.1',
     packages=find_packages(),
     description='ROS Point Cloud Recorder and Exporter',
     long_description=open('README.md').read(),
