@@ -9,6 +9,7 @@ topics = ['/points_raw1', '/points_raw2']
 recorder = PointCloudRecorder(
     topics=topics,
     output_dir='./recordings',  # bag文件保存路径
+    bag_file='my_recording.bag',  # 自定义bag文件名
     recording_duration=3.0,
     cleanup=True
 )

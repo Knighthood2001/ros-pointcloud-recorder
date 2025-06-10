@@ -1,5 +1,9 @@
 
 # 示例代码
+ros仿真中有两个点云话题，我想要将其录制下来。就可以使用这个库方便的进行录制导出成点云pcd文件。
+
+![Alt text](../img/image.png)
+
 ros_pointcloud_recorder/examples/base_usage.py运行后的结果如下：
 ```shell
 wu@wu:~/code/pythonDemo$ /usr/bin/python3 /home/wu/code/pythonDemo/ros_pointcloud_recorder/examples/base_usage.py

@@ -33,6 +33,20 @@ print("导出完成:")
 for topic, path in pcd_paths.items():
     print(f"{topic} -> {path}")
 ```
+运行结果：
+```shell
+wu@wu:~/code/pythonDemo$ /usr/bin/python3 /home/wu/code/pythonDemo/base_usage.py
+2025-06-10 16:10:43,978 - PointCloudRecorder - INFO - 初始化录制器: 输出目录=./data, 录制时长=2.0s
+2025-06-10 16:10:43,978 - PointCloudRecorder - INFO - 开始录制话题: /points_raw1, /points_raw2
+2025-06-10 16:10:44,479 - PointCloudRecorder - INFO - 录制中... (时长: 2.0s)
+2025-06-10 16:10:46,894 - PointCloudRecorder - INFO - 录制已停止
+2025-06-10 16:10:47,394 - PointCloudRecorder - INFO - 导出话题 /points_raw1 到 ./data/points_raw1
+2025-06-10 16:10:47,992 - PointCloudRecorder - INFO - 导出话题 /points_raw2 到 ./data/points_raw2
+2025-06-10 16:10:48,604 - PointCloudRecorder - INFO - 已清理临时文件: ./data/recorded_point_clouds.bag
+导出完成:
+/points_raw1 -> ./data/points_raw1
+/points_raw2 -> ./data/points_raw2
+```
 
 ## 高级功能
 
@@ -41,7 +55,7 @@ for topic, path in pcd_paths.items():
 - 自定义日志配置
 - 保留中间bag文件
 
-详细用法请参考[示例代码](examples/)。
+**详细用法请参考[示例代码](examples/)。**
 
 
 ## 设计要点
@@ -65,3 +79,6 @@ for topic, path in pcd_paths.items():
 - **v0.1.3** (2025-06-10)
   - 修改了README.md 
   - 修改了setup.py
+- **v0.1.4** (2025-06-10)
+  - 支持自定义bag文件名称
+  - 完善了README.md

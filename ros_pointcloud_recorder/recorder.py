@@ -8,7 +8,7 @@ import shutil
 class PointCloudRecorder:
     """ROS点云录制器，支持录制点云话题并导出为PCD文件"""
     
-    def __init__(self, topics, output_dir="./", recording_duration=1.0, cleanup=True, logger=None):
+    def __init__(self, topics, output_dir="./", bag_file="recorded_point_clouds.bag", recording_duration=1.0, cleanup=True, logger=None):
         """
         初始化点云录制器
         
@@ -29,7 +29,7 @@ class PointCloudRecorder:
         self.recording_duration = recording_duration
         self.cleanup = cleanup
         self.recording_process = None
-        self.bag_file = "recorded_point_clouds.bag"
+        self.bag_file = bag_file
         
         # 配置日志
         self.logger = logger or logging.getLogger("PointCloudRecorder")
