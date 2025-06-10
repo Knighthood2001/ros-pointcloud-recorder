@@ -62,6 +62,6 @@ for topic, path in pcd_paths.items():
   - 修改了README.md
 - **v0.1.2** (2025-06-10)
   - 修改了requirements.txt
-- **v0.1.2** (2025-06-10)
+- **v0.1.3** (2025-06-10)
   - 修改了README.md 
   - 修改了setup.py
