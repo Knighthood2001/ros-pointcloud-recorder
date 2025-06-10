@@ -12,7 +12,7 @@ pip install ros-pointcloud-recorder
 ```python
 from ros_pointcloud_recorder import PointCloudRecorder
 ```
-# 创建录制器
+## 创建录制器
 ```python
 recorder = PointCloudRecorder(
     topics=['/points_raw1', '/points_raw2'],
