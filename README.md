@@ -2,6 +2,14 @@
 
 一个简单的Python库，用于录制ROS点云话题并导出为PCD文件。
 
+**Github地址：[https://github.com/Knighthood2001/ros-pointcloud-recorder](https://github.com/Knighthood2001/ros-pointcloud-recorder)**
+
+## 依赖
+重点说明：安装这个项目包的时候，我没有指定需要安装`pcl-ros`和`rosbag`，但是你在使用的时候，是需要有这个包的，因为这两个包，一般都是通过`apt install ros-<ros版本>-pcl-ros`和`apt install ros-<ros版本>-rosbag`安装的，所以你需要先安装这两个包。
+
+- **ROS (必须安装`rosbag`和`pcl_ros`)**，因此你需要先安装ROS环境，才能使用ros-pointcloud-recorder。
+- Python 3.6+
+
 ## 安装
 
 ```bash
@@ -11,9 +19,7 @@ pip install ros-pointcloud-recorder
 
 ```python
 from ros_pointcloud_recorder import PointCloudRecorder
-```
-## 创建录制器
-```python
+# 创建录制器
 recorder = PointCloudRecorder(
     topics=['/points_raw1', '/points_raw2'],
     output_dir='./data',
@@ -37,11 +43,6 @@ for topic, path in pcd_paths.items():
 
 详细用法请参考[示例代码](examples/)。
 
-## 依赖
-
-- ROS (必须安装`rosbag`和`pcl_ros`)
-- Python 3.6+
-
 
 ## 设计要点
 
@@ -59,4 +60,8 @@ for topic, path in pcd_paths.items():
   - 初始发布，提供基本的点云录制和导出功能
 - **v0.1.1** (2025-06-10)
   - 修改了README.md
-  
+- **v0.1.2** (2025-06-10)
+  - 修改了requirements.txt
+- **v0.1.2** (2025-06-10)
+  - 修改了README.md 
+  - 修改了setup.py

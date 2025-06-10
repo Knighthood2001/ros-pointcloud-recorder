@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ros-pointcloud-recorder',
-    version='0.1.1',
+    version='0.1.3',
     packages=find_packages(),
     description='ROS Point Cloud Recorder and Exporter',
     long_description=open('README.md').read(),
@@ -26,12 +26,6 @@ setup(
     ],
     keywords='ros pointcloud recorder pcl rosbag lidar',
     install_requires=[
-        'rosbag',
-        'pcl_ros',
-        'rospy',
-        'sensor_msgs',
-        'numpy>=1.18.0',
-        'setuptools>=45.0.0'
     ],
     extras_require={
         'dev': [
