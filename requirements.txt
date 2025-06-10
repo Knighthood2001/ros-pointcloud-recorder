@@ -1,0 +1,7 @@
+# 核心依赖
+rosbag
+pcl_ros
+rospy
+sensor_msgs
+numpy>=1.18.0
+
